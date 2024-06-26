@@ -1,4 +1,4 @@
-# 🌟 Hina's Portfolio Website 🌟
+# 🌟 Adarsh's Portfolio Website 🌟
 
 Welcome to the repository for my **personal website**! It's built with HTML, CSS, JavaScript. 
 
@@ -36,7 +36,7 @@ If you want to view this project locally:
 
 I'd love to hear your thoughts on my portfolio! You can reach out to me on LinkedIn.
           <p>
-            <img src="./img/linkedin.png" alt="LinkedIn">
+            <img src="./img/linkedin.png" width="200" height="150" alt="LinkedIn">
             <a href="https://www.linkedin.com/in/adarsh-sonkusre-a3b4bb293/a" class="contact-icon" target="_blank"></a>
           </p>
 
