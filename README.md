@@ -23,7 +23,7 @@ This website serves as my professional portfolio. My goal was to create a design
 
 ## 🖥 How to View 🖥
 
-Visit my portfolio at this link!😀 [https://otahina.github.io/Mywebsite/](https://otahina.github.io/Mywebsite/)
+Visit my portfolio at this link!😀 [https://adarshsonkusre.github.io/Portfolio-Website/](https://adarshsonkusre.github.io/Portfolio-Website/)
 
 ## 💼 Setup 💼
 
@@ -35,6 +35,9 @@ If you want to view this project locally:
 ## 📞 Contact 📞
 
 I'd love to hear your thoughts on my portfolio! You can reach out to me on LinkedIn.
+<a href="https://www.linkedin.com/in/adarsh-sonkusre-a3b4bb293/a" target="_blank"> 
+    <img src="./img/linkedin.png" alt="LinkedIN" /> 
+  </a> 
 
 
 
