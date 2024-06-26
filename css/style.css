@@ -1,0 +1,1579 @@
+/* Reset style sheet */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    font-size: 100%;
+    font-family: 'Lobster', cursive;
+    background:  radial-gradient(circle at 10% 20%, rgb(8, 5, 185) 0%, rgb(209, 0, 17) 90%);
+    color: #fff;
+    overflow-x: hidden;
+    line-height: 1.5;
+  }
+  
+  img, video {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+  }
+  
+  /* Global */
+  
+body, html {
+    height: 100%; 
+}
+
+.bolder-text {
+  font-family:'Courier New', Courier, monospace;
+  font-weight: 800;
+}
+  
+/* Showcase */
+
+.container {
+  display: flex;
+  height: 100vh; /* This will make the container take up the full viewport height */
+  position: relative;
+  z-index: 0;
+  padding: 2em 2em 0 2em;
+}
+
+
+.left.box {
+  background-image:
+    url('../img/me.png');
+  background-color: rgba(247, 223, 7, 0.7);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  border-style: None;
+  border-radius: 50px;
+  height: 98%;
+  width: 30%; 
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+  overflow: hidden; 
+  z-index: 1;
+  position: relative;
+  border: 0.3em solid #000052;
+}
+
+
+.left, .right {
+  flex-direction: column;
+  width: 70%;
+}
+
+.left {
+  justify-content: space-between; 
+}
+
+.right {
+  padding: 0 1em;
+  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* This creates two equal width columns */
+  grid-gap: 0.5em;
+  grid-template-rows: repeat(3, 1fr); /* This creates three equal height rows */
+}
+
+#disc h2{
+  font-size: 35px;
+  margin-right: 20px;
+  color: #000052;
+  position: relative;
+  left: -12px;
+  top: 153px;
+  transition: none 0s ease 0s;
+  cursor: move;
+  width: 400px;
+}
+
+
+#disc h1{
+  font-size: 35px;
+  margin-right: 20px;
+  color: #000052;
+  position: relative;
+  left: 30px;
+  top: 145px;
+  transition: none 0s ease 0s;
+  cursor: move;
+  width: 400px;
+}
+
+#disc h4{
+  font-weight: 600;
+  font-size: 26px;
+  padding: 0px;
+  position: relative;
+  left:130px;
+  top: 140px;
+  text-align: left;
+  color: #000052;
+}
+
+#my-name {
+  color:rgb(223, 4, 4);
+}
+
+#disc {
+  background: url('../img/cloud.png') no-repeat center center; 
+  position: absolute;
+  background-size: contain;
+  padding: 0;
+  width: 450px;
+  height: 450px;
+  left: -80px;
+  top: -54px;
+  transition: none 0s ease 0s;
+  cursor: move;
+}
+
+.left.box p {
+  font-size: 19px;
+  margin-top: 10px;
+  width: 300px;
+  text-align: left;
+}
+
+.box {
+  height: 93%;
+  box-sizing: border-box; /* This includes the border in the element's total width and height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-style: None;
+  font-size: 23px;
+  position: relative;
+  overflow: hidden; 
+}
+
+/* Animation */
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Animated background */
+
+.bubbles {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1; 
+}
+
+.bubble {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  animation: float linear infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100vh); /* Move up to the height of the viewport */
+  }
+}
+
+.about-me {
+  background: linear-gradient(-45deg, rgba(53, 128, 165, 0.7),  rgba(3, 128, 223, 0.7));
+  border-radius: 50px;
+  transition: transform 0.3s ease;
+  position: relative;
+  animation: 1s ease-out 0s 1 slideInFromTop;
+  border: 5px solid #000052;
+  color: #000052;
+}
+
+.con.hover {
+  transform: scale(1.5); /* Scale up the box a bit */
+  transition: transform 0.3s ease;
+}
+
+  
+.skills {
+  background: linear-gradient(-45deg, rgba(133, 248, 118, 0.7), rgba(75, 255, 81, 0.7));
+  border-radius: 50px;
+  transition: transform 0.3s ease;
+  position: relative;
+  animation: 1s ease-out 0s 1 slideInFromRight;
+  border: 5px solid #000052;
+  color: #000052;
+}
+
+.projects {
+  background: linear-gradient(-45deg,rgba(248, 52, 246, 0.7), rgba(152, 38, 252, 0.7));
+  border-radius: 50px;
+  transition: transform 0.3s ease;
+  position: relative;
+  animation: 1s ease-out 0s 1 slideInFromRight;
+  border: 5px solid #000052;
+  color: #000052;
+}
+
+.copyright {
+  font-size: 20px;
+  background: linear-gradient(-45deg, rgba(93, 248, 219, 0.7), rgba(7, 234, 255, 0.7));
+  border-radius: 50px;
+  animation: 1s ease-out 0s 1 slideInFromBottom;
+  border: 5px solid #000052;
+  color: #000052;
+}
+
+.contacts {
+  background: linear-gradient(-45deg, rgba(236, 159, 5, 0.7), rgba(247, 117, 61, 0.7));
+  border-radius: 50px;
+  transition: transform 0.3s ease;
+  position: relative;
+  animation: 1s ease-out 0s 1 slideInFromBottom;
+  border: 5px solid #000052;
+  color: #000052;
+}
+
+.career {
+  background: linear-gradient(-45deg, rgba(251, 69, 69, 0.7), rgba(251, 69, 69, 0.7));
+  border-radius: 50px;
+  transition: transform 0.3s ease;
+  position: relative;
+  animation: 1s ease-out 0s 1 slideInFromRight;
+  border: 5px solid #000052;
+  color: #000052;
+}
+
+/* For buttons */
+
+.white-circle-button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  border: 3px solid #000052;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:  #000052;
+  font-size: 15px;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-right: 30px;
+  margin-bottom: 10px;
+}
+
+
+.white-circle-button:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1.1);
+}
+
+/* Modal About Me */
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1000; /* Sit on top */
+  padding-top: 70px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; 
+  background-color: rgba(178, 187, 190, 0.8); 
+}
+
+.modal-content-about {
+  background-image:
+    url('../img/anime_lights_buildings_city_background_4k_hd_anime-1280x720.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: rgb(190, 8, 8);
+  margin: auto;
+  padding: 20px 30px 0px 50px;
+  border-radius: 1em;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 90%;
+  height: 90%;
+  overflow: auto;
+}
+
+.close {
+  margin-top:20px;
+  margin-right: 20px;
+  border-radius: 50%;  /* Round border for a circular shape */
+  border: 1px solid white;
+  font-size: 40px;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  color: white;
+  line-height: 35px;  /* To center the 'x' vertically */
+  text-align: center;  /* To center the 'x' horizontally */
+  float: right;
+}
+
+.close:hover,
+.close:focus {
+  text-decoration: none;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  transform: scale(1.1);
+}
+
+.modal-content-about h5{
+  text-align: center;
+  color: orange;
+  font-size: 3em;
+  position: relative;
+}
+
+.about-me-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.text-box {
+  margin-top: 3em;
+  margin-bottom: 2em;
+  background: rgba(243, 240, 240, 0.7);
+  position: relative;
+  width: 90%;
+  height: 70%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+}
+
+.about-me-content-text{
+  font-family:'Courier New', Courier, monospace;
+  font-weight: 500;
+  color: #000052;
+  padding: 2em;
+  width: 100%;
+  line-height: 2em;
+}
+
+.about-me-content-text::first-letter{
+  font-size: 2em;
+}
+
+.social-media-box ul {
+  position: relative;
+  display: flex;
+}
+
+.social-media-box ul li{
+  margin: 0.5em;
+  background: rgba(56, 188, 253, 0.1);
+  position: relative;
+  list-style: none;
+  color: #27285C;
+  border: 1px solid rgba(56, 188, 253, 0.5);
+  font-size: 2.5em;
+  width: 70px;
+  height: 70px;
+  justify-content: center;
+  text-decoration: none;
+  align-items: center;
+  display: flex;
+  border-radius: 10px;
+  border-right: 1px solid rgba(56, 188, 253, 0.2);
+  border-bottom: 1px solid rgba(56, 188, 253, 0.2);
+  box-shadow: 0 0.3em 0.5em rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.social-media-box ul li:hover{ 
+  transform: translateY(-20px);
+}
+
+.social-media-box ul li::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 100%;
+  background: rgba(56, 188, 253, 0.2);
+  transform: skewX(45deg) translateX(150px);
+  transition: 0.5s;
+}
+
+.social-media-box ul li:hover::before{
+  transform: skewX(45deg) translateX(-150px);
+}
+
+.social-media-box img {
+  width: 2em;
+  height: 2em;
+}
+
+/* Modal Skills */
+
+.modal-content-skills {
+  background-image:
+  linear-gradient(125deg, rgba(139, 145, 139, 0.7), rgba(199, 201, 199, 0.7)), 
+    url('../img/anime_city_buildings_under_white_clouds_blue_sky_4k_hd_anime-1280x720.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: black;
+  margin: auto;
+  padding: 20px 30px 0px 50px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 90%;
+  height: 90%;
+  overflow: auto; 
+}
+
+.modal-content-skills h5{
+  text-align: center;
+  color: #dc5e34;
+  font-size: 50px;
+  padding-top: 20px;
+  word-spacing: 20px;
+}
+
+.skills-section, .skills-section2 {
+  margin-top: 20px;
+  margin-left: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  margin-right: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-section p {
+  color: white;
+  font-size: 20px;
+  background-color: rgba(42, 24, 24, 0.6);
+  border-radius: 20px;
+  text-align:center;
+  width: 300px;
+  height: 45px;
+  padding-top: 6px;
+  margin: 0 auto 30px auto;
+}
+
+.skills-section2 p {
+  color: white;
+  font-size: 20px;
+  background-color: rgba(42, 24, 24, 0.6);
+  border-radius: 20px;
+  text-align:center;
+  width: 300px;
+  height: 45px;
+  padding-top: 6px;
+  margin: 0 auto 30px auto;
+}
+
+.programming-list {
+  list-style: none;
+  padding: 0px;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.programming-item:hover{
+  transform: scale(1.1);
+}
+
+.tools-item:hover{
+  transform: scale(1.1);
+}
+
+.soft-item:hover{
+  transform: scale(1.1);
+}
+
+.programming-item, .tools-item, .soft-item{
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.programming-item img {
+  width: 60px; 
+  height: 60px; 
+  margin-right: 70px; 
+  position: center;
+}
+
+.tools-item img {
+  width: 60px; 
+  height: 60px; 
+  margin-right: 70px; 
+  position: center;
+}
+
+.soft-item img {
+  width: 70px; 
+  height: 70px; 
+  margin-right: 70px; 
+  position: center;
+}
+
+.white-con {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50px;
+  border: white;
+  padding: 10px;
+  width: 70px; 
+  height: 70px; 
+  margin-right: 50px; 
+}
+
+#postgresql {
+  width: 50px; 
+  height: 45px;
+  position: center;
+  padding-left: 0;
+}
+
+#django {
+  width: 50px; 
+  height: 45px;
+  position: center;
+  padding-left: 0;
+}
+
+#python {
+  width: 50px; 
+  height: 50px;
+  position: center;
+  padding-left: 0;
+}
+
+#java {
+  width: 45px; 
+  height: 45px;
+  position: center;
+  padding-left: 0;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width:125px;
+  background-color: rgba(42, 24, 24, 0.6);
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;  
+  left: 50%; 
+  margin-left: -60px; /* Use half of the width value */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tools-list {
+  list-style: none;
+  padding: 0px;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.skills-section-lg p {
+  color: white;
+  font-size: 20px;
+  background-color: rgba(42, 24, 24, 0.6);
+  border-radius: 20px;
+  text-align:center;
+  width: 200px;
+  height: 45px;
+  padding-top: 6px;
+  margin: 20px auto 30px auto;
+  position:relative;
+  left: 270px;
+  top: 0px;
+}
+
+.skills-section-lg {
+  width: 100%;
+  max-width: 520px;
+  margin-left: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills-section-lg h4 {
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.language-name {
+  font-size: 20px;
+  margin-left: 5px;
+  position: relative;
+  left: 130px;
+  top: 22px;
+}
+
+#japanese {
+  font-size: 18px;
+  margin-left: 5px;
+  position: relative;
+  left: 70px;
+  top: 22px;
+}
+
+#japan {
+  position: relative;
+  left: 63px;
+  top: 20px;
+}
+
+.language img {
+  position: relative;
+  left: 133px;
+  top: 20px;
+}
+
+.progress {
+  background-color: #000000;
+  border-radius: 50px;
+  height: 25px;
+  position: relative;
+  left: 288px;
+  top: -6px;
+}
+
+.progress-bar {
+  background-color: #dc5e34;
+  height: 100%;
+  border: solid #000000;
+  border-radius: 50px;
+}
+
+.progress-text {
+  font-size: 18px;
+  width: 800px;
+  text-align: center;
+  padding-left: 200px;
+  position: relative;
+  left: 344px;
+  top:-30px;
+}
+
+.soft-skills-list {
+  list-style: none;
+  padding: 0px;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+#web-design {
+  width: 60px; 
+  height: 60px; 
+  margin-right: 70px; 
+  position: center;
+}
+
+#short-disc-for-hungarian{
+  color: black;
+  font-size: 1em;
+  margin: 0;
+  background: transparent;  
+  width: 50%;
+  position: relative;
+  top: -20px;
+}
+
+/* Projects */
+
+.modal-content-projects {
+  background-image:
+    url('../img/anime_city_street_hd_anime-1280x720.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: black;
+  margin: auto;
+  padding: 20px 30px 0px 50px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 90%;
+  height: 90%;
+  overflow: auto; 
+}
+
+.modal-content-projects h5{
+  text-align: center;
+  color: #a4508b;
+  font-size: 50px;
+   word-spacing: 20px;
+   margin-bottom: 1em;
+}
+
+.project {
+  width: 90%;
+  margin-top: 5em;
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  padding: 20px;
+  background-color: rgba(43, 65, 98, 0.7);
+  background-image: linear-gradient(315deg, rgba(43, 65, 98, 0.8) 0%, rgba(18, 16, 14, 0.8) 74%);  
+}
+
+.project-digest{
+  font-family: 'Courier New', Courier, monospace;
+  width: 100%;
+  padding-left: 2em;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  display: flex;
+  text-align: center;
+  margin-bottom: 1em;
+  margin-top: 2em;
+}
+
+.digest {
+background-color: rgba(164, 80, 139, 0.7);
+background-image: linear-gradient(0deg, rgba(95, 10, 135, 0.7) 0%, rgba(164, 80, 139, 0.7) 100%);
+  display: inline-block;
+  width: 35%;
+  height: 40vh;
+  border-radius: 1em;
+  margin-right: 1.5em;
+}
+
+.digest h4{
+  padding: 0 1em 1em 1em;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.3em;
+}
+
+#digest1, #digest2{
+  transition: transform 0.3s ease;
+}
+
+#digest1:hover{
+  transform: scale(1.08);
+}
+
+#digest2:hover{
+  transform: scale(1.08);
+}
+
+#digest1-icon{
+  width: 10em;
+  height: 10em;
+}
+
+#digest2-icon{
+  width: 10em;
+  height: 10em;
+  margin-top: 0.3em;
+}
+
+.project h3{
+  background-color: rgba(43, 65, 98, 0.7);
+  border-radius: 20px;
+  width: 800px;
+  padding: 10px 20px 10px 20px;
+  color: white;
+  font-size: 28px;
+  margin-bottom: 8px;
+  margin-top: 2em;
+}
+
+.project h6{
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 8px;
+  margin-left: 10px;
+}
+
+.project p{
+  margin: 20px 20px 20px 20px;
+}
+
+
+#pp_preview {
+  padding: 0px 100px 0px 80px;
+  height: 500px;
+  width:  1000px;
+  left: 130px;
+  top: 0px;
+}
+
+/* Career */
+
+.modal-content-career {
+  background:
+    url('../img/anime_building_city_hd_anime-1280x720.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: black;
+  margin: auto;
+  padding: 1em 1em 0 1em;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 90%;
+  height: 90%;
+  overflow: auto; 
+}
+
+.modal-content-career h5{
+  text-align: center;
+  color: rgb(254, 61, 116);
+  font-size: 50px;
+  padding-top: 20px;
+  word-spacing: 20px;
+}
+
+.career-section{
+  font-family: 'Courier New', Courier, monospace;
+  margin: 10px 20px 10px 20px;
+}
+
+.career-container {
+  margin: 40px 40px;
+  font-family: 'Courier New', Courier, monospace;
+  background: rgba(42, 24, 24, 0.5);
+  border-radius: 20px;
+  width: 90%;
+  padding: 10px;
+}
+
+.career-container ul{
+  list-style: none;
+  margin: 10px 0 0 3em;
+  padding: 0;
+  position: relative;
+}
+
+.career-container ul::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0px;
+  height: 100%;
+  border: 2px dashed white;
+}
+
+.career-container ul li {
+  margin: 50px 60px;
+  position: relative;
+}
+
+.career-box {
+  width: 90%;
+  background: linear-gradient(-45deg, rgba(60, 89, 163, 0.8), rgba(47, 164, 255, 0.8));
+  border-radius: 20px;
+  padding: 25px;
+  margin-left: 3em;
+  color: white;
+  font-weight: 600;
+}
+
+.career-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.career-info { 
+  font-weight: 200;
+}
+
+.focus {
+  font-weight: 600;
+}
+
+.career-container ul li > span {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: -60px;
+  width: 0px;
+  height: 100%;
+  border: 2px solid white;
+}
+
+.career-container ul li > span::before, .career-container ul li > span::after {
+  content: '';
+  width: 15px;
+  height: 15px;
+  border: 2px solid white;
+  position: absolute;
+  border-radius: 50%;
+  left: -10px;
+  background: rgb(254, 61, 116);
+}
+
+.career-container ul li > span::before{
+  top: -13px;
+}
+
+.career-container ul li > span:after{
+  top: 100%;
+}
+
+.career-container ul li .career-time span {
+  position: absolute;
+  width: 60px;
+  left: -30px;
+  text-align: right;
+  color: white;
+}
+
+.career-container ul li .career-time span:first-child{
+  top: 0;
+}
+
+.career-container ul li .career-time span:last-child{
+  top: 100%;
+}
+
+/* Contacts */
+
+.modal-content-contacts {
+  background-image: 
+    linear-gradient(125deg, rgba(247, 117, 61, 0.7), rgba(236, 159, 5, 0.7)), 
+    url('../img/i5.jpg'); 
+  background-size: cover;
+  background-position: center; 
+  color: black;
+  margin: auto;
+  padding: 1em 2em 2em 3em;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 90%;
+  height: 95%;
+  overflow: auto;
+}
+
+
+.content-wrapper {
+  width: 100%;
+  max-width: 1180px;  
+  position: relative;
+  height: auto;
+}
+
+.contact-info {
+  background-color:rgba(0, 0, 0, 0.3); /* Semi-transparent black background */
+  color: white; /* White text */
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40%;
+  margin-top: 0;
+  transition: none 0s ease 0s;
+  cursor: move;
+  margin-right: 2em;
+}
+
+.contact-info p {
+  margin: 20px 0; /* More space between lines */
+  font-size: 20px;
+
+}
+
+.contact-info i {
+  margin-right: 10px; /* Space between icon and text */
+}
+
+.contact-info a {
+  color: white; 
+}
+
+.contact-info a:hover {
+  color: #00c4cc; /* Change color on hover */
+  text-decoration: none; /* Remove underline on hover */
+}
+
+.contact-form, .contact-info{
+  display: inline-block;
+}
+
+.contact-form {
+  font-family: 'Courier New', Courier, monospace;
+  flex-basis: 40%;
+  background-color: #ffffff;
+  padding: 25px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  height: auto;
+  margin-right:50px;
+  margin-top: 10px;
+  width: 50%;
+  position: relative;
+
+}
+
+.contact-form form label,
+.contact-form form input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.contact-form form textarea {
+  width: 100%;
+  height: 200px; /* Fixed height, adjust this as needed */
+  resize: none; /* Prevents the textarea from being manually resized */
+  margin-bottom: 10px;
+}
+
+.contact-form form input[type="text"],
+.contact-form form input[type="email"] {
+  height: 35px; 
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid black;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.contact-form form textarea {
+  height: 100px; 
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid black;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.contact-form form input[type="text"]:focus,
+.contact-form form input[type="email"]:focus,
+.contact-form form textarea:focus {
+  outline: none; 
+}
+
+.contact-form form input[type="submit"] {
+  background-color: #00c4cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%; /* Full width button */
+  padding: 15px; /* Increase padding to make the button larger */
+  font-size: 18px; /* Increase font size */
+}
+
+.contact-form form input[type="submit"]:hover {
+  background-color: #0099a3;
+}
+
+.modal-content-contacts h4{
+  text-align: center;
+  color: #0099a3;
+  font-size: 50px;
+  padding-top: 20px;
+  word-spacing: 20px;
+}
+
+.modal-content-contacts h5{
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  font-size: 20px;
+  color:white;
+  padding: 10px;
+  font-weight: 200;
+  margin: 0px 100px 10px 70px;
+}
+
+.contact-info img {
+  width: 40px; 
+  height: 40px; 
+  margin-right: 20px; 
+}
+
+#gmail {
+  width: 40px; 
+  height: 30px; 
+  margin-right: 20px; 
+}
+
+#pdf {
+  width: 40px; 
+  height: 40px; 
+  margin: 0 20px 0 0;
+}
+
+.contact-icon {
+  font-size: 23px;
+  color: white;
+}
+
+/* For smartphone */
+
+@media only screen and (max-width: 768px) {
+
+  /* Reset style sheet */
+
+  * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    font-size: 80%; /* Reduce font-size for mobile screens */
+    font-family: 'Lobster', cursive;
+    background-color: white;
+    color: #fff;
+    overflow-x: hidden;
+    line-height: 1.5;
+  }
+
+  .container {
+    flex-direction: column; /* stack the elements vertically */
+    height: auto; /* Allow the height to expand as needed */
+  }
+
+  .left, .right {
+    width: 100%; /* Take up full width on small screens */
+  }
+
+  .right {
+    grid-template-columns: 1fr; /* Change to one column layout */
+    grid-template-rows: auto; /* Allow rows to take up as much space as needed */
+    grid-gap: 0;
+  }
+
+  .left.box {
+    width: 90%; 
+    height: 550px;
+    margin: 30px 20px 10px 15px;
+    background-position: 70%;
+  }
+
+  #disc {
+    width: 400px;
+    height: 400px;
+  }
+
+  #disc h2{
+    left: -12px;
+    top: 140px;
+  }
+  
+  
+  #disc h1{
+    left: 30px;
+    top: 135px;
+  }
+  
+  #disc h4{
+    left:130px;
+    top: 125px;
+  }
+
+  .left.box p {
+    font-size: 16px; /* Reduce font-size for mobile screens */
+    width: 90%; /* Allow text to take more width */
+  }
+
+  .about-me {
+    background: linear-gradient(-45deg, rgba(56, 188, 253, 0.7),  rgba(3, 128, 223, 0.7));
+    margin: 10px 20px 12px 5px;
+    border-radius: 50px;
+    position: relative;
+  }
+
+  .skills {
+    background: linear-gradient(-45deg, rgba(133, 248, 118, 0.7), rgba(75, 255, 81, 0.7));
+    margin: 10px 20px 12px 5px;
+    position: relative;
+  }
+
+  .projects {
+    background: linear-gradient(-45deg,rgba(248, 52, 246, 0.7), rgba(152, 38, 252, 0.7));
+    margin: 10px 20px 12px 5px;
+    transition: transform 0.3s ease;
+    position: relative;
+    animation: 1s ease-out 0s 1 slideInFromRight;
+  }
+  
+  .career {
+    background: linear-gradient(-45deg, rgba(251, 69, 69, 0.7), rgba(251, 69, 69, 0.7));
+    margin: 10px 20px 12px 5px;
+    transition: transform 0.3s ease;
+    position: relative;
+    animation: 1s ease-out 0s 1 slideInFromRight;
+  }
+
+  .contacts {
+    background: linear-gradient(-45deg, rgba(236, 159, 5, 0.7), rgba(247, 117, 61, 0.7));
+    margin: 10px 20px 12px 5px;
+    transition: transform 0.3s ease;
+    position: relative;
+    animation: 1s ease-out 0s 1 slideInFromBottom;
+  }
+
+  .copyright {
+    font-size: 20px;
+    background: linear-gradient(-45deg, rgba(93, 248, 219, 0.7), rgba(7, 234, 255, 0.7));
+    margin: 10px 20px 12px 10px;
+    animation: 1s ease-out 0s 1 slideInFromBottom;
+  }
+
+  .box {
+    height: auto; /* Allow boxes to expand as needed */
+  }
+
+  .modal-content-about {
+    width: 90%; 
+    height: auto;
+    padding: 20px;
+  }
+
+  .modal-content-about {
+    background-position: 10% 10%;
+  }
+
+  .picture-box {
+    width: 90%;
+    left: 155px;
+    top: 150px;
+  }
+  
+  .picture-box img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    border-radius: 20px; 
+  }
+
+  .about-me-section {
+    width: 100%;
+    height: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .text-box {
+    width: 100%;
+    height: 1300px;
+    padding: 20px;
+    top: 0;
+    border-top: none;
+    margin:0px;
+  }
+
+  .social-media-box::before {
+    left: 100px;
+    top: -100px;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 1200px;
+    height: 10%;
+    backdrop-filter: blur(5px);
+    border-top: none;
+  }
+
+  .social-media-box ul {
+    position: absolute; /* Absolute positioning relative to the parent */
+    top: 0; /* Position at the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Fine-tune centering */ 
+  }
+
+  .social-media-box ul li{
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .social-media-box {
+    position: relative; 
+  }
+
+  .modal-content-about h5 {
+    left: 0; /* Removing the left shift */
+    top: 25px;
+  }
+
+  .modal-content-about p{
+    font-size: 15px;
+    color: #000052;
+    position: relative;
+    top: 330px;
+    line-height: 25px;
+    padding-top: 5px;
+  }
+
+  /* modal skills */
+
+  .modal-content-skills {
+    width: 90%; /* Allow modal content to take up more width */
+    height: auto;
+    padding: 20px;
+    background-position: 40%;
+  }
+
+  .programming-list, .tools-list {
+    list-style: none;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap; /* Allows the items to wrap onto the next line */
+    justify-content: space-between; /* Even spacing between the items */
+    margin-bottom: 10px;
+  }
+
+  .soft-skills-list {
+    list-style: none;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap; /* Allows the items to wrap onto the next line */
+    justify-content: space-around;
+    margin-bottom: 10px;
+  }
+
+  .programming-list li {
+    flex-basis: 33.33%; /* Each item will take up one-third of the container's width */
+    box-sizing: border-box; 
+    margin-bottom: 20px;
+  }
+
+  .tools-list li {
+    flex-basis: 33.33%; /* Each item will take up one-third of the container's width */
+    box-sizing: border-box; 
+    margin-bottom: 20px;
+  }
+
+  .soft-skills-list li {
+    flex: 0 0 calc(33.33% - 10px); /* Each item takes up one-third, minus a small gap */
+    box-sizing: border-box;
+    margin: 5px; /* Adds a small gap between the items */
+  }
+
+  .soft-skills-list li:nth-child(4),
+  .soft-skills-list li:nth-child(5) {
+    flex-basis: calc(50% - 10px); /* The last two items take up half the width, minus a small gap */
+  }
+
+  .tooltip .tooltiptext {
+    width:90px;
+    font-size: 12px;
+  }
+
+  .skills-section-lg p {
+    left: 0;
+    top: 0;
+  }
+
+  .language-name {
+    left: 0;
+    top: 0;
+  }
+
+  .progress {
+    left: 0;
+    top: 0;
+  }
+  
+  .language img {
+    left: 0;
+    top: 0;
+  }
+
+
+  .progress-text {
+    left: 50px;
+    top:0;
+    width: 100px;
+  }
+
+  #japanese {
+    left: 0;
+    top: 0;
+  }
+
+  #japan {
+    left: 0;
+    top: 0;
+  }
+
+
+  /* Modal Project */
+
+  .modal-content-projects {
+    width: 90%; 
+    height: auto;
+    padding: 10px;
+    background-position: 90%;
+  }
+
+  .project {
+    margin: 10px;
+  }
+
+  .project h3{
+    width: 100%;
+  }
+
+  .project p {
+    width: 100%;
+    font-size: 15px;
+    margin: 5px;
+  }
+
+  #pp_preview {
+    width: 100%;
+    padding: 5px 0 0 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+
+  /* Modal career */
+
+  .modal-content-career {
+    width: 90%; 
+    height: auto;
+    padding: 10px;
+    background-position: 65%;
+  }
+
+  .career-container {
+    width: 100%;
+    margin: 0;
+  }
+
+  .career-box {
+    width: 200px;
+    margin: 0;
+  }
+
+  .career-container ul li .career-time span {
+    left: -60px;
+  }
+
+  /* Modal contact */
+
+  .modal-content-contacts {
+    width: 90%; 
+    height: auto;
+    padding: 10px;
+    background-position: 45%;
+  }
+
+  .modal-content-contacts h4{
+    font-size: 45px;
+  }
+
+  .modal-content-contacts h5{
+    font-size: 20px;
+    color:white;
+    padding: 10px;
+    font-weight: 200;
+    margin: 0;
+  }
+
+  .contact-info {
+    width: 100%;
+    margin: 0;
+    left: 0;
+    top: 0;
+  }
+
+  .contact-form {
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}
