@@ -35,11 +35,10 @@ If you want to view this project locally:
 ## 📞 Contact 📞
 
 I'd love to hear your thoughts on my portfolio! You can reach out to me on LinkedIn.
-          <p>
-            <img src="./img/linkedin.png" width="100" height="100" alt="LinkedIn">
-            <a href="https://www.linkedin.com/in/adarsh-sonkusre-a3b4bb293/a" class="contact-icon" target="_blank"></a>
-          </p>
-
+          
+<a href="https://www.linkedin.com/in/adarsh-sonkusre-a3b4bb293/a" target="_blank">
+    <img src="./img/linkedin.png" alt="LinkedIN" style="width: 200px; height: auto;">
+</a>
 
 
 
